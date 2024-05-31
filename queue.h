@@ -1,16 +1,16 @@
 #pragma once
 #include "linkedlist.h"
 
-class Queue
+class SingleSideQueue
 {
 	singleLinkedList q;
 public:
-	Queue(): q()
+	SingleSideQueue(): q()
 	{
 		
 	}
 
-	~Queue()
+	~SingleSideQueue()
 	{
 		removeAll();
 	}
@@ -25,6 +25,11 @@ public:
 	int dequeue()
 	{
 		q.deleteAt(0);
+	}
+
+	int front()
+	{
+		return q.get(0);
 	}
 
 	int size() { return q.size(); }

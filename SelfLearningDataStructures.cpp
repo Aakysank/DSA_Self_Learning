@@ -4,12 +4,43 @@
 #include <iostream>
 #include "linkedlist.h"
 #include "doublylinkedlist.h"
+#include "queue.h"
+#include "stack.h"
+#include "binarysearchtree.h"
+#include "heap.h"
+
+using namespace std;
+
 
 int main(int argc, char** argv)
 {
     std::cout << "Running unit test for datastructures developed from scratch" << std::endl;
-
     testing::InitGoogleTest(&argc, argv);
+
+    int b[] = { 10, 20, 30, 25, 5, 40, 35 };
+    std::vector<int> heapData;
+    Heap h(7);
+
+    for (int i = 0; i < 7; i++)
+        h.InsertInHeap(b[i]);
+
+    h.getHeapData(heapData);
+    for (auto data : heapData)
+    {
+        std::cout << data << "\t";
+    }
+
+    std::cout << std::endl;
+
+    for (int i = 0; i < 7; i++)
+        std::cout << h.Delete() << "\t";
+
+    std::cout << std::endl;
+
+    TreeNode* pMyBST = NULL;
+    CreateBinaryTree(&pMyBST);
+    isBalanced(pMyBST);
+
     return RUN_ALL_TESTS();
 }
 
