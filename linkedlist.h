@@ -174,6 +174,46 @@ public:
 	}
 
 	int size() { return length; }
+
+	void insertSorted(int data)
+	{
+		
+		Node* t = new Node;
+		t->data = data;
+		t->next = NULL;
+
+		if (_head == NULL)
+		{
+			_head = t;
+			length++;
+			return;
+		}
+		else
+		{
+			Node* p = _head, *q = NULL;
+			while (p != NULL && p->data < data)
+			{
+				q = p;
+				p = p->next;
+			}
+
+			if (q)
+			{
+				Node* temp = q->next;
+				q->next = t;
+				t->next = temp;
+			}
+			else
+			{
+				q = t;
+				q->next = _head;
+				_head = q;
+			}
+
+		}
+
+		length++;
+	}
 };
 
 TEST(SingleLinkedListTest, InsertAtHeadTest)
