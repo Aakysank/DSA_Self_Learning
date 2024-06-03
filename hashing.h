@@ -39,7 +39,7 @@ public:
 			else if (Hash[index].get(i) > key)
 				return x;
 			else
-				return key;
+				return index;
 		}
 		
 		return x;

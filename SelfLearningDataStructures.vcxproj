@@ -146,7 +146,9 @@
     <ClInclude Include="binarysearchtree.h" />
     <ClInclude Include="binarytree.h" />
     <ClInclude Include="doublylinkedlist.h" />
+    <ClInclude Include="hashing.h" />
     <ClInclude Include="heap.h" />
+    <ClInclude Include="linearprobing.h" />
     <ClInclude Include="linkedlist.h" />
     <ClInclude Include="queue.h" />
     <ClInclude Include="stack.h" />

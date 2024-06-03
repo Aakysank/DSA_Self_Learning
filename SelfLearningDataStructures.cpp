@@ -8,6 +8,8 @@
 #include "stack.h"
 #include "binarysearchtree.h"
 #include "heap.h"
+#include "hashing.h"
+#include "linearprobing.h"
 
 using namespace std;
 
