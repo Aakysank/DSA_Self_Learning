@@ -140,6 +140,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="graph.h" />
     <ClCompile Include="SelfLearningDataStructures.cpp" />
   </ItemGroup>
   <ItemGroup>

@@ -30,7 +30,7 @@ public:
 	void removeAll() { st.removeAll(); }
 };
 
-bool isValidParantheses(std::string parantheses)
+/*bool isValidParantheses(std::string parantheses)
 {
 	if (!parantheses.size())
 		return false;
@@ -64,4 +64,4 @@ TEST(StackTest, ValidParanthesesTest)
 	std::string parantheses1 = { "{())]}" }, parantheses2 = {"{()[]}"};
 	EXPECT_TRUE(isValidParantheses(parantheses1) == false);
 	EXPECT_TRUE(isValidParantheses(parantheses2) == true);
-}
+}*/

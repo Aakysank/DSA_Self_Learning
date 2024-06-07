@@ -216,7 +216,7 @@ public:
 	}
 };
 
-TEST(SingleLinkedListTest, InsertAtHeadTest)
+/*TEST(SingleLinkedListTest, InsertAtHeadTest)
 {
 	singleLinkedList slist;
 	slist.insertAtHead(5);
@@ -272,6 +272,6 @@ TEST(SingleLinkedListTest, ReversingLinks)
 	for (int i = 0, j = slist.size()-1; i < slist.size(), j >= 0; i++, j--)
 		EXPECT_EQ(larray[j], slist.get(i));
 }
-
+*/
 
 

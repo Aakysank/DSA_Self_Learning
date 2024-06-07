@@ -231,13 +231,20 @@ public:
 
 		if (!p->left && !p->right)
 		{
-			if (p == root)
-				root = NULL;
+			if (p->data != key)
+			{
+				return p;
+			}
+			else
+			{
+				if (p == root)
+					root = NULL;
 
-			delete p;
-			p = NULL;
+				delete p;
+				p = NULL;
 
-			return NULL;
+				return NULL;
+			}
 		}
 		//Searching for the node happens
 		if (key < p->data)

@@ -17,14 +17,14 @@ public:
 
 	void removeAll() { q.removeAll(); }
 
-	void enqueue(int data)
+	void enqueue(int &data)
 	{
 		q.insertAtTail(data);
 	}
 
 	int dequeue()
 	{
-		q.deleteAt(0);
+		return q.deleteAt(0);
 	}
 
 	int front()

@@ -10,6 +10,7 @@
 #include "heap.h"
 #include "hashing.h"
 #include "linearprobing.h"
+#include "graph.h"
 
 using namespace std;
 
@@ -18,8 +19,8 @@ int main(int argc, char** argv)
 {
     std::cout << "Running unit test for datastructures developed from scratch" << std::endl;
     testing::InitGoogleTest(&argc, argv);
-
     return RUN_ALL_TESTS();
+
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
