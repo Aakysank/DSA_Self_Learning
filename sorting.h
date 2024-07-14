@@ -142,19 +142,24 @@ void IMergeSort(int A[], int n)
 //Google Jam Code contest - 2021. (Reversort) -- Sorting by reversing the array.
 void Reversort(int A[], int n)
 {
+	int cost = 0;
 	for (int i = 0; i < n - 1; i++)
 	{
 		int j = i+1;
 
+		if (j >= n)
+			continue;
+
 		//Find the minimum element for the selected ith index
-		while (A[j] > A[i])
+		while (j < n && A[j] > A[i])
 		{
 			j++;
 		}
 
+		cost = cost + (j - i + 1);
 		//Reverse array
 		int k = i;
-		while (k < j)
+		while (j < n && k < j)
 		{
 			int temp = A[k];
 			A[k] = A[j];
