@@ -138,3 +138,30 @@ void IMergeSort(int A[], int n)
 	if (p / 2 < n)
 		Merge(A, 0, (p / 2)-1, n);
 }
+
+//Google Jam Code contest - 2021. (Reversort) -- Sorting by reversing the array.
+void Reversort(int A[], int n)
+{
+	for (int i = 0; i < n - 1; i++)
+	{
+		int j = i+1;
+
+		//Find the minimum element for the selected ith index
+		while (A[j] > A[i])
+		{
+			j++;
+		}
+
+		//Reverse array
+		int k = i;
+		while (k < j)
+		{
+			int temp = A[k];
+			A[k] = A[j];
+			A[j] = temp;
+			
+			k++;
+			j--;
+		}
+	}
+}
